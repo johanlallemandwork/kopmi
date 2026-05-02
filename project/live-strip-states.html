@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>KOPMI · Live strip · 3 états</title>
+<link rel="icon" href="assets/logo/logo_kopmi.svg" />
+<link rel="stylesheet" href="site.css" />
+<style>
+  body { background: var(--kopmi-off-white); padding: 56px 32px; }
+  .frame { max-width: 1080px; margin: 0 auto; }
+  .frame__head { margin-bottom: 36px; }
+  .frame__head h1 {
+    font-family: var(--font-display); font-weight: 800;
+    font-size: 2rem; letter-spacing: -0.025em;
+    color: var(--kopmi-navy-deep); margin: 0 0 8px;
+  }
+  .frame__head p { margin: 0; color: var(--kopmi-graphite); font-size: 0.95rem; max-width: 60ch; line-height: 1.55; }
+  .frame__list { display: flex; flex-direction: column; gap: 28px; }
+  .state {
+    background: #fff;
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .state__head {
+    padding: 14px 20px 14px;
+    display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 1px solid var(--border-soft);
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .state__name {
+    font-family: var(--font-display); font-weight: 800;
+    font-size: 1.05rem; letter-spacing: -0.01em;
+    color: var(--kopmi-navy-deep);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .state__pill {
+    font-size: 0.62rem; font-weight: 800; letter-spacing: 0.16em;
+    text-transform: uppercase; padding: 4px 10px; border-radius: 999px;
+    color: #fff;
+  }
+  .state__pill--live { background: var(--kopmi-crimson); }
+  .state__pill--reveal { background: var(--kopmi-gold); color: var(--kopmi-navy-deep); }
+  .state__pill--upcoming { background: var(--kopmi-navy); }
+  .state__meta { font-size: 0.75rem; color: var(--kopmi-graphite); letter-spacing: 0.04em; }
+  .state__strip { /* the strip itself spans full width */ }
+  .state__notes {
+    padding: 14px 20px 16px;
+    font-size: 0.78rem;
+    color: var(--kopmi-graphite);
+    line-height: 1.6;
+    background: var(--kopmi-cream);
+    border-top: 1px solid var(--border-soft);
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;
+  }
+  .state__notes b { color: var(--kopmi-navy-deep); font-weight: 700; }
+  .state__notes code {
+    background: rgba(31,45,90,0.06);
+    padding: 1px 6px; border-radius: 4px;
+    font-family: var(--font-ace);
+    font-size: 0.72rem;
+    color: var(--kopmi-navy-deep);
+  }
+  .tech {
+    margin-top: 36px;
+    padding: 24px 28px;
+    background: var(--kopmi-navy-deep);
+    color: rgba(255,255,255,0.85);
+    border-radius: var(--radius-md);
+    font-size: 0.85rem;
+    line-height: 1.7;
+  }
+  .tech h3 {
+    font-family: var(--font-display); font-weight: 800;
+    color: #fff; margin: 0 0 10px; font-size: 1rem; letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .tech code {
+    background: rgba(255,255,255,0.08);
+    padding: 1px 6px; border-radius: 4px;
+    font-family: var(--font-ace);
+    font-size: 0.78rem;
+    color: var(--kopmi-gold);
+  }
+</style>
+</head>
+<body>
+
+<div class="frame" data-screen-label="Live strip · 3 états">
+  <div class="frame__head">
+    <span class="eyebrow">Composant conditionnel</span>
+    <h1>Live strip · 3 états</h1>
+    <p>Le bandeau lit <code style="font-family:var(--font-ace);font-size:0.85rem;background:rgba(31,45,90,0.06);padding:1px 6px;border-radius:4px">battle_status</code> et affiche la variante correspondante. Les variables <b>n°</b>, <b>joueur</b>, <b>%</b>, <b>gagnante</b>, <b>date</b> sont tirées de la base.</p>
+  </div>
+
+  <div class="frame__list">
+
+    <!-- ÉTAT 1 — LIVE -->
+    <article class="state">
+      <header class="state__head">
+        <div class="state__name"><span class="state__pill state__pill--live">État 1</span> Battle en cours · live</div>
+        <div class="state__meta">Pendant les 24h de vote</div>
+      </header>
+      <div class="state__strip">
+        <div class="live-strip live-strip--live">
+          <a href="#">
+            <span class="live-strip__dot"></span>
+            <span class="live-strip__chip">LIVE</span>
+            <span>Battle 03 Tchouameni · 3 hymnes en compétition · Vote ouvert</span>
+            <span class="live-strip__cta">→</span>
+          </a>
+        </div>
+      </div>
+      <div class="state__notes">
+        <div><b>Couleur</b><br/>Crimson <code>#A02038</code></div>
+        <div><b>Anim</b><br/>Dot gold pulsation 1.5s</div>
+        <div><b>Trigger</b><br/><code>status: "live"</code></div>
+      </div>
+    </article>
+
+    <!-- ÉTAT 2 — REVEAL -->
+    <article class="state">
+      <header class="state__head">
+        <div class="state__name"><span class="state__pill state__pill--reveal">État 2</span> Reveal du résultat</div>
+        <div class="state__meta">24h après la fin du vote</div>
+      </header>
+      <div class="state__strip">
+        <div class="live-strip live-strip--reveal">
+          <a href="#">
+            <span class="live-strip__chip">RÉSULTAT</span>
+            <span>🏆 Battle 03 : <strong>ACE</strong> l'emporte avec 41% des votes</span>
+            <span class="live-strip__cta">→</span>
+          </a>
+        </div>
+      </div>
+      <div class="state__notes">
+        <div><b>Couleur</b><br/>Gold <code>#E8A434</code> · texte navy</div>
+        <div><b>Anim</b><br/>Aucune (statique, célébration)</div>
+        <div><b>Trigger</b><br/><code>status: "reveal"</code></div>
+      </div>
+    </article>
+
+    <!-- ÉTAT 3 — UPCOMING -->
+    <article class="state">
+      <header class="state__head">
+        <div class="state__name"><span class="state__pill state__pill--upcoming">État 3</span> Entre deux battles · par défaut</div>
+        <div class="state__meta">Avant l'ouverture du vote</div>
+      </header>
+      <div class="state__strip">
+        <div class="live-strip live-strip--upcoming">
+          <a href="#">
+            <span class="live-strip__chip">PROCHAINE</span>
+            <span>Prochaine battle : <strong>Mbappé</strong> · vendredi à 19h · 3 hymnes en route</span>
+            <span class="live-strip__cta">→</span>
+          </a>
+        </div>
+      </div>
+      <div class="state__notes">
+        <div><b>Couleur</b><br/>Navy <code>#1F2D5A</code></div>
+        <div><b>Anim</b><br/>Aucune</div>
+        <div><b>Trigger</b><br/><code>status: "upcoming"</code></div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="tech">
+    <h3>Brief dev</h3>
+    Le composant <code>&lt;KopmiLiveStrip status battle /&gt;</code> reçoit deux props.
+    Côté serveur, exposer un endpoint <code>/api/battle/current</code> qui renvoie
+    <code>{ battle_status, n, player, percent, winner, date }</code>.
+    Le composant front mappe <code>battle_status</code> aux 3 variantes ci-dessus.
+    Au passage de <code>live</code> → <code>reveal</code> (à T+0h fin de vote),
+    déclencher un refresh côté CDN. À T+24h, basculer sur <code>upcoming</code>
+    avec les données de la battle suivante.
+  </div>
+
+</div>
+
+</body>
+</html>
