@@ -779,18 +779,14 @@ button { font-family: inherit; }
 .product--blaze .product__img img {
   position: relative;
   z-index: 1;
-  width: 70%;
-  height: auto;
-  max-height: 95%;
-  object-fit: contain;
   filter: drop-shadow(0 20px 28px rgba(27,94,32,0.30)) drop-shadow(0 0 18px rgba(255,209,102,0.4));
 }
 
 /* Force product titles to be bright on dark cards (override h3 default navy color) */
 .product--ace .product__title,
-.product--riff .product__title { color: #fff; }
+.product--riff .product__title { color: #fff !important; }
 .product--blaze .product__title,
-.product--pack .product__title { color: var(--kopmi-navy-deep); }
+.product--pack .product__title { color: var(--kopmi-navy-deep) !important; }
 .product--blaze .product__plus { background: #1B5E20; color: #fff; }
 .product--riff { background: linear-gradient(180deg, #0a0a0a 0%, #0a0a0a 60%, #8B0000 100%); color: #fff; }
 .product--riff .product__plus { background: #ADFF2F; color: #0a0a0a; }
