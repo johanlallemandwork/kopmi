@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>KOPMI — Le kop a une voix. Elle est en peluche.</title>
+<link rel="icon" href="project/assets/logo/logo_kopmi.svg" />
+<link rel="stylesheet" href="site.css" />
+</head>
+<body>
+
+<!-- ========= LIVE STRIP ========= -->
+<div class="live-strip live-strip--live">
+  <a href="project/battles.html">
+    <span class="live-strip__dot"></span>
+    <span class="live-strip__chip">LIVE</span>
+    <span>Battle 03 Tchouameni · 3 hymnes en compétition · Vote ouvert</span>
+    <span class="live-strip__cta">→</span>
+  </a>
+</div>
+
+<!-- ========= HEADER ========= -->
+<header class="k-header">
+  <a href="index.html" class="k-header__brand">
+    <img src="project/assets/logo/logo_kopmi.svg" alt="KOPMI" />
+    KOPMI
+  </a>
+  <nav class="k-nav">
+    <a href="index.html" class="active">Accueil</a>
+    <a href="#boutique">Boutique</a>
+    <a href="#mascottes">Mascottes</a>
+    <a href="project/battles.html">Battles</a>
+    <a href="#">Pronostic</a>
+  </nav>
+  <div class="k-header__icons">
+    <button class="k-icon-btn" aria-label="Recherche">⌕</button>
+    <button class="k-icon-btn" aria-label="Compte">◔</button>
+    <button class="k-icon-btn k-icon-btn--cart" aria-label="Panier" data-count="2">🛒</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ========= HERO ========= -->
+  <section class="hero">
+    <div class="hero__pattern"></div>
+    <div class="hero__glow"></div>
+    <div class="hero__grid">
+      <div>
+        <span class="chip-gold">★ Édition CDM 2026</span>
+        <h1>
+          Le kop a une<br/>
+          <span class="gold-grad">voix.</span> Elle est<br/>
+          en peluche.
+        </h1>
+        <p class="hero__lead">
+          Trois mascottes peluches qui chantent la passion du foot français.
+          Drill, reggae, rock. Une seule famille.
+        </p>
+        <div class="hero__ctas">
+          <a href="#boutique" class="btn btn--gold btn--lg">Précommander la peluche →</a>
+          <a href="project/battles.html" class="btn btn--ghost-light btn--lg">Voir les battles</a>
+        </div>
+      </div>
+
+      <div class="hero__trio">
+        <img class="hero__trio-img hero__trio-img--side"
+             src="project/assets/mascots/blaze_full.png" alt="BLAZE"
+             style="left: -10%; bottom: 4%;" />
+        <img class="hero__trio-img hero__trio-img--side"
+             src="project/assets/mascots/riff_full.png" alt="RIFF"
+             style="right: -10%; bottom: 4%;" />
+        <img class="hero__trio-img hero__trio-img--lead"
+             src="project/assets/mascots/ace_full.png" alt="ACE" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= BATTLE BANNER ========= -->
+  <section class="battle-banner">
+    <div class="battle-banner__inner">
+      <div>
+        <div class="battle-banner__label">
+          <span class="dot"></span>
+          Battle 03/10 · Tchouameni
+        </div>
+        <h3>3 hymnes. 1 vote. Le kop décide.</h3>
+        <div class="battle-banner__scores">
+          <span class="score-pill"><span class="swatch" style="background:#1F2D5A"></span> ACE 41%</span>
+          <span class="score-pill"><span class="swatch" style="background:#1B5E20"></span> BLAZE 22%</span>
+          <span class="score-pill"><span class="swatch" style="background:#8B0000"></span> RIFF 37%</span>
+          <span class="battle-banner__votes">· 4 821 votes</span>
+        </div>
+      </div>
+      <div class="countdown" aria-label="Temps restant">
+        <div class="countdown__cell">
+          <div class="countdown__num" id="cd-h">14</div>
+          <div class="countdown__label">Heures</div>
+        </div>
+        <div class="countdown__cell">
+          <div class="countdown__num" id="cd-m">27</div>
+          <div class="countdown__label">Minutes</div>
+        </div>
+        <div class="countdown__cell">
+          <div class="countdown__num" id="cd-s">43</div>
+          <div class="countdown__label">Secondes</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= TRIO MASCOTS ========= -->
+  <section class="section" id="mascottes">
+    <div class="section__inner">
+      <div class="section__head">
+        <div>
+          <span class="eyebrow">Les KOPMIS</span>
+          <h2>Trois voix. Un seul kop.</h2>
+        </div>
+        <p style="max-width: 36ch;">
+          Chacun son animal, son style musical, son verbe. Tu choisis ta tribune.
+        </p>
+      </div>
+
+      <div class="trio-grid">
+        <!-- ACE -->
+        <article class="mcard mcard--ace">
+          <div class="mcard__top">
+            <span class="mcard__badge">🦅 Drill · Aigle</span>
+            <h3 class="mcard__title">ACE</h3>
+            <p class="mcard__sub">"Han. Brr. Le kop écoute."</p>
+          </div>
+          <div class="mcard__img">
+            <img src="project/assets/mascots/ace_full.png" alt="ACE" />
+          </div>
+          <button class="mcard__cta">Univers ACE →</button>
+        </article>
+
+        <!-- BLAZE -->
+        <article class="mcard mcard--blaze">
+          <div class="mcard__top">
+            <span class="mcard__badge">🍃 Reggae · Élan</span>
+            <h3 class="mcard__title">Blaze</h3>
+            <p class="mcard__sub">"Yeah man, easy. On est ensemble."</p>
+          </div>
+          <div class="mcard__img">
+            <img src="project/assets/mascots/blaze_full.png" alt="BLAZE" />
+          </div>
+          <div class="mcard__overlay"></div>
+          <button class="mcard__cta">Univers BLAZE →</button>
+        </article>
+
+        <!-- RIFF -->
+        <article class="mcard mcard--riff">
+          <div class="mcard__top">
+            <span class="mcard__badge">🤘 Rock · Jaguar</span>
+            <h3 class="mcard__title">RIFF</h3>
+            <p class="mcard__sub">ALLEZ ALLEZ ALLEZ !</p>
+          </div>
+          <div class="mcard__img">
+            <img src="project/assets/mascots/riff_full.png" alt="RIFF" />
+          </div>
+          <button class="mcard__cta">Univers RIFF →</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= HOW IT WORKS — Système 10 × 3 ========= -->
+  <section class="section section--cream">
+    <div class="section__inner">
+      <div class="section__head section__head--center">
+        <span class="eyebrow">Comment ça marche</span>
+        <h2>Le système 10 × 3 = 30 hymnes</h2>
+        <p>Pour chaque joueur des Bleus, les 3 KOPMIS proposent leur version. Toi, tu votes. Le kop décide.</p>
+      </div>
+
+      <!-- SCHEMA -->
+      <div class="schema">
+        <div class="schema__row schema__row--player">
+          <div class="schema__player">
+            <div class="schema__player-eyebrow">Joueur exemple</div>
+            <div class="schema__player-name">Tchouameni</div>
+          </div>
+        </div>
+
+        <div class="schema__branches">
+          <div class="schema__branch-line"></div>
+          <div class="schema__arrow schema__arrow--down">↓</div>
+        </div>
+
+        <div class="schema__row schema__row--mascots">
+          <div class="schema-col schema-col--ace">
+            <div class="schema-col__head">
+              <div class="schema-col__name">ACE</div>
+              <div class="schema-col__style">drill</div>
+            </div>
+            <div class="schema-col__arrow">↓</div>
+            <div class="schema-col__score schema-col__score--winner">
+              <span class="schema-col__pct">41%</span>
+              <span class="schema-col__crown">🏆</span>
+            </div>
+            <div class="schema-col__bar">
+              <div class="schema-col__fill" style="width: 41%;"></div>
+            </div>
+          </div>
+
+          <div class="schema-col schema-col--blaze">
+            <div class="schema-col__head">
+              <div class="schema-col__name">BLAZE</div>
+              <div class="schema-col__style">reggae</div>
+            </div>
+            <div class="schema-col__arrow">↓</div>
+            <div class="schema-col__score">
+              <span class="schema-col__pct">22%</span>
+            </div>
+            <div class="schema-col__bar">
+              <div class="schema-col__fill" style="width: 22%;"></div>
+            </div>
+          </div>
+
+          <div class="schema-col schema-col--riff">
+            <div class="schema-col__head">
+              <div class="schema-col__name">RIFF</div>
+              <div class="schema-col__style">rock</div>
+            </div>
+            <div class="schema-col__arrow">↓</div>
+            <div class="schema-col__score">
+              <span class="schema-col__pct">37%</span>
+            </div>
+            <div class="schema-col__bar">
+              <div class="schema-col__fill" style="width: 37%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="schema__vote">
+          <span class="schema__vote-tag">Tu votes ici</span>
+          <span class="schema__vote-arrow">↓</span>
+        </div>
+
+        <div class="schema__outcome">
+          <div class="schema__outcome-line">
+            <span class="schema__outcome-trophy">🏆</span>
+            <strong>ACE</strong>
+            <span class="schema__outcome-verb">l'emporte sur Tchouameni</span>
+          </div>
+          <div class="schema__outcome-bonus">
+            +25 pts pour les fans qui ont voté ACE
+          </div>
+        </div>
+      </div>
+
+      <!-- Micro-cards chiffres clés -->
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step__num">01</div>
+          <p class="step__desc step__desc--strong">10 joueurs des Bleus mis à l'honneur</p>
+          <span class="step__pill">10 battles</span>
+        </div>
+        <div class="step">
+          <div class="step__num">02</div>
+          <p class="step__desc step__desc--strong">× 3 versions par joueur (drill, reggae, rock)</p>
+          <span class="step__pill step__pill--ace">ACE · BLAZE · RIFF</span>
+        </div>
+        <div class="step">
+          <div class="step__num">03</div>
+          <p class="step__desc step__desc--strong">Tu votes ta préférée. +5 pts par vote, +25 pts si tu as voté pour la gagnante</p>
+          <span class="step__pill step__pill--blaze">+5 / +25 pts</span>
+        </div>
+        <div class="step">
+          <div class="step__num">04</div>
+          <p class="step__desc step__desc--strong">La mascotte avec le plus de victoires sur 10 battles remporte le trophée KOPMIS</p>
+          <span class="step__pill step__pill--riff">🏆 KOPMIS</span>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 48px;">
+        <a href="project/battles.html" class="btn btn--primary btn--lg">Voir toutes les battles →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= BOUTIQUE ========= -->
+  <section class="section section--cream" id="boutique" style="padding-top: 0;">
+    <div class="section__inner">
+      <div class="section__head">
+        <div>
+          <span class="eyebrow">Boutique · Précommande ouverte</span>
+          <h2>Choisis ta KOPMI.</h2>
+        </div>
+        <p style="max-width: 40ch;">
+          39€ la peluche. Seuil 50 commandes ou remboursement 100%. Pas de risque, juste du kop.
+        </p>
+      </div>
+
+      <div class="shop-grid">
+        <article class="product product--ace">
+          <span class="product__badge">Précommande</span>
+          <div class="product__img">
+            <img src="project/assets/mascots/ace_portrait_3.png" alt="" />
+          </div>
+          <div class="product__bottom">
+            <div>
+              <h3 class="product__title">Peluche ACE</h3>
+              <div class="product__price">39 €</div>
+            </div>
+            <button class="product__plus" aria-label="Ajouter">+</button>
+          </div>
+        </article>
+
+        <article class="product product--blaze">
+          <span class="product__badge">Précommande</span>
+          <div class="product__img">
+            <img src="project/assets/mascots/blaze_pack_portrait.png" alt="Peluche BLAZE en hoodie blanc des Bleus extérieur" />
+          </div>
+          <div class="product__bottom">
+            <div>
+              <h3 class="product__title">Peluche BLAZE</h3>
+              <div class="product__price">39 €</div>
+            </div>
+            <button class="product__plus" aria-label="Ajouter">+</button>
+          </div>
+        </article>
+
+        <article class="product product--riff">
+          <span class="product__badge">Précommande</span>
+          <div class="product__img">
+            <img src="project/assets/mascots/riff_portrait.png" alt="" />
+          </div>
+          <div class="product__bottom">
+            <div>
+              <h3 class="product__title">Peluche RIFF</h3>
+              <div class="product__price">39 €</div>
+            </div>
+            <button class="product__plus" aria-label="Ajouter">+</button>
+          </div>
+        </article>
+
+        <article class="product product--pack">
+          <span class="product__badge">★ Pack trio</span>
+          <div class="product__img product__img--triophoto">
+            <img src="project/assets/mascots/trio_pack.png" alt="Pack des 3 peluches RIFF, ACE et BLAZE" />
+          </div>
+          <div class="product__bottom">
+            <div>
+              <h3 class="product__title">Pack trio KOPMIS</h3>
+              <div class="product__price">99 €</div>
+            </div>
+            <button class="product__plus" aria-label="Ajouter">+</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ========= FOOTER ========= -->
+<footer class="k-footer">
+  <div class="k-footer__inner">
+    <div class="k-footer__grid">
+      <div>
+        <a href="index.html" class="k-footer__brand">
+          <img src="project/assets/logo/logo_kopmi.svg" alt="" />
+          KOPMI
+        </a>
+        <p class="k-footer__pitch">
+          Le kop a une voix. Elle est en peluche.<br/>
+          3 mascottes, 30 hymnes, le foot français façon tribune contemporaine.
+        </p>
+        <div class="k-footer__socials">
+          <a aria-label="TikTok">TT</a>
+          <a aria-label="Instagram">IG</a>
+          <a aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div>
+        <h5>Boutique</h5>
+        <ul>
+          <li><a href="#boutique">Peluche ACE</a></li>
+          <li><a href="#boutique">Peluche BLAZE</a></li>
+          <li><a href="#boutique">Peluche RIFF</a></li>
+          <li><a href="#boutique">Pack trio 99€</a></li>
+          <li><a href="#boutique">Édition CDM 2026</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Aventure</h5>
+        <ul>
+          <li><a href="project/battles.html">Battles 10 × 3</a></li>
+          <li><a href="#">Pronostic Grand Tirage</a></li>
+          <li><a href="#">Trophée KOPMIS</a></li>
+          <li><a href="#">Monsieur Kop</a></li>
+          <li><a href="#">14.07.26 · TikTok Live</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Légal</h5>
+        <ul>
+          <li><a href="#">SAS Kurohé</a></li>
+          <li><a href="mailto:contact@kopmi.fr">contact@kopmi.fr</a></li>
+          <li><a href="#">CGV / Mentions légales</a></li>
+          <li><a href="#">Politique de remboursement</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="k-footer__legal">
+      © 2026 KOPMI by <strong>Kurohé SAS</strong> · Édition Coupe du Monde 2026 · Projet indépendant
+      non affilié à la FIFA, à la FFF, à la LFP, à TikTok ni à aucun club professionnel.
+    </div>
+  </div>
+</footer>
+
+<!-- Countdown live (mini script vanilla JS) -->
+<script>
+(function () {
+  var h = document.getElementById('cd-h');
+  var m = document.getElementById('cd-m');
+  var s = document.getElementById('cd-s');
+  if (!h || !m || !s) return;
+  var pad = function (n) { return String(n).padStart(2, '0'); };
+  var hh = 14, mm = 27, ss = 43;
+  setInterval(function () {
+    ss -= 1;
+    if (ss < 0) { ss = 59; mm -= 1; }
+    if (mm < 0) { mm = 59; hh -= 1; }
+    if (hh < 0) { hh = 0; mm = 0; ss = 0; }
+    h.textContent = pad(hh);
+    m.textContent = pad(mm);
+    s.textContent = pad(ss);
+  }, 1000);
+})();
+</script>
+
+</body>
+</html>
