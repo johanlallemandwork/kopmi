@@ -775,9 +775,16 @@ button { font-family: inherit; }
   z-index: 0;
   pointer-events: none;
 }
+.product--blaze .product__img {
+  align-items: center;
+  padding-top: 28px;
+}
 .product--blaze .product__img img {
   position: relative;
   z-index: 1;
+  height: 100%;
+  width: auto;
+  max-height: 100%;
   filter: drop-shadow(0 20px 28px rgba(27,94,32,0.30)) drop-shadow(0 0 18px rgba(255,209,102,0.4));
 }
 .product--blaze .product__plus { background: #1B5E20; color: #fff; }
